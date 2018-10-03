@@ -1,0 +1,24 @@
+#!/usr/bin/env php
+<?php
+/**
+ * User: boshurik
+ * Date: 04.10.18
+ * Time: 0:27
+ */
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+$renderer = new \Sudoku\Renderer\ConsoleRenderer();
+$factory = new Sudoku\Factory\FileFactory();
+$table = $factory->create($argv[1]);
+
+echo $renderer->render($table);
+
+echo \PHP_EOL . \PHP_EOL;
+
+$solver = new \Sudoku\Solver\Solver();
+$solver->solve($table);
+
+echo $renderer->render($table);
+
+echo \PHP_EOL . \PHP_EOL;
