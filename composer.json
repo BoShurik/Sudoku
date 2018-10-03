@@ -1,0 +1,19 @@
+{
+    "name": "boshurik/sudoku",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "BoShurik",
+            "email": "boshurik@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Sudoku\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.2"
+    }
+}
